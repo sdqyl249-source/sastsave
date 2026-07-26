@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Basics -->
-  <title>تنزيل ستوريات وفيديوهات مجاناً وبدون علامة مائية | FastSave</title>
+  <title>FastSave - تنزيل ستوريات وفيديوهات مجاناً وبدون علامة مائية</title>
   <meta name="description" content="أسرع أداة أونلاين لتنزيل الفيديوهات والستوريات من تيك توك، إنستغرام، يوتيوب، وفيسبوك بأعلى جودة HD وبدون علامة مائية مجاناً.">
-  <meta name="keywords" content="تنزيل ستوريات, تحميل فيديوهات, تنزيل تيك توك بدون علامة مائية, تنزيل ستوري انستقرام, FastSave, تحميل مقاطع">
-  <meta name="author" content="FastSave">
   <link rel="canonical" href="https://sastsave.vercel.app/" />
   
   <!-- Google Verification -->
   <meta name="google-site-verification" content="alqQlMQkk46K23PBrmnaD9SaxqgGSUQiMEEtV11YQMY" />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sastsave.vercel.app/">
-  <meta property="og:title" content="FastSave - تنزيل ستوريات وفيديوهات مجاناً">
-  <meta property="og:description" content="حمل الفيديوهات والستوريات من تيك توك، إنستغرام، يوتيوب وفيسبوك بضغطة زر وبأعلى جودة!">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800">
 
   <!-- Scripts, Icons & Fonts -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +19,19 @@
   
   <style>
     body { font-family: 'Tajawal', sans-serif; }
+    .loader {
+      border: 3px solid #f3f3f3;
+      border-top: 3px solid #db2777;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 1s linear infinite;
+      display: none;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body class="bg-slate-900 text-white min-h-screen flex flex-col justify-between">
@@ -37,10 +41,9 @@
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
         <span class="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-amber-400">FastSave</span>
-        <span class="hidden sm:inline-block text-xs text-slate-400 border border-slate-700 px-2 py-1 rounded-md">تنزيل ستوريات وفيديوهات مجاناً</span>
       </div>
-      <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full font-bold flex items-center gap-1">
-        <i class="fa-solid fa-circle-check"></i> مجاني 100%
+      <span class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full font-bold">
+        مجاني 100%
       </span>
     </div>
   </header>
@@ -53,23 +56,7 @@
         تنزيل ستوريات وفيديوهات <br>
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-amber-400">مجاناً وبدون علامة مائية</span>
       </h1>
-      <p class="text-slate-400 text-sm md:text-base">حمل من تيك توك، إنستغرام، يوتيوب، وفيسبوك بأعلى جودة وبضغطة زر</p>
-    </div>
-
-    <!-- Top Ad Slot -->
-    <div class="w-full bg-slate-800/40 border border-slate-700/50 border-dashed rounded-xl p-3 mb-6 text-center text-xs text-slate-500 min-h-[90px] flex items-center justify-center overflow-x-auto">
-      <div>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '291df70fc95b6f75599d9cf0d3022ad6',
-            'format' : 'iframe',
-            'height' : 90,
-            'width' : 728,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="https://www.highperformanceformat.com/291df70fc95b6f75599d9cf0d3022ad6/invoke.js"></script>
-      </div>
+      <p class="text-slate-400 text-sm md:text-base">حمل من إنستغرام، تيك توك، وباقي المنصات بضغطة زر</p>
     </div>
 
     <!-- Input Form Box -->
@@ -80,48 +67,35 @@
           id="videoUrl"
           placeholder="ضع رابط الفيديو أو الستوري هنا..." 
           required
-          class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm md:text-base focus:outline-none focus:border-pink-500 text-white placeholder-slate-500 transition-colors"
+          class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-4 py-3.5 text-sm md:text-base focus:outline-none focus:border-pink-500 text-white placeholder-slate-500"
         />
         <button 
           type="submit" 
           id="submitBtn"
-          class="bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 hover:opacity-90 text-white font-bold px-8 py-3.5 rounded-xl text-sm md:text-base transition-all transform active:scale-95 shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2"
+          class="bg-gradient-to-r from-pink-500 via-red-500 to-amber-500 hover:opacity-90 text-white font-bold px-8 py-3.5 rounded-xl text-sm md:text-base flex items-center justify-center gap-2 active:scale-95 transition-all"
         >
-          <i class="fa-solid fa-download"></i>
+          <div class="loader" id="btnLoader"></div>
+          <i class="fa-solid fa-download" id="btnIcon"></i>
           <span id="btnText">تحميل الآن</span>
         </button>
       </form>
     </div>
 
-    <!-- Result Box -->
+    <!-- Result Box (Hidden by default) -->
     <div id="resultBox" class="hidden w-full bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col md:flex-row gap-6 items-center mb-8">
-      <img id="videoThumb" src="" alt="Thumbnail" class="w-44 h-52 object-cover rounded-xl shadow-md border border-slate-700">
+      <img id="videoThumb" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400" alt="Thumbnail" class="w-32 h-32 object-cover rounded-xl border border-slate-700">
       <div class="flex-1 text-center md:text-right space-y-4 w-full">
-        <h3 id="videoTitle" class="font-bold text-slate-200 line-clamp-2 text-sm md:text-base">تم جلب المقطع بنجاح!</h3>
-        <div id="downloadOptions" class="flex flex-col sm:flex-row gap-3 w-full"></div>
-      </div>
-    </div>
-
-    <!-- Bottom Ad Slot -->
-    <div class="w-full bg-slate-800/40 border border-slate-700/50 border-dashed rounded-xl p-4 text-center text-xs text-slate-500 min-h-[250px] flex items-center justify-center overflow-x-auto">
-      <div>
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '708cd9f4288ef2ee4853fe16ea23d5fe',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="https://www.highperformanceformat.com/708cd9f4288ef2ee4853fe16ea23d5fe/invoke.js"></script>
+        <h3 class="font-bold text-slate-200 text-sm md:text-base">تم تجهيز روابط التحميل!</h3>
+        <div id="downloadOptions" class="flex flex-col gap-3 w-full">
+          <!-- Links will be added here -->
+        </div>
       </div>
     </div>
 
   </main>
 
   <footer class="w-full border-t border-slate-800 py-6 text-center text-xs text-slate-500">
-    <p>© FastSave - تنزيل ستوريات وفيديوهات مجاناً. جميع الحقوق محفوظة.</p>
+    <p>© FastSave - جميع الحقوق محفوظة.</p>
   </footer>
 
   <script>
@@ -129,78 +103,89 @@
     const urlInput = document.getElementById('videoUrl');
     const submitBtn = document.getElementById('submitBtn');
     const btnText = document.getElementById('btnText');
+    const btnIcon = document.getElementById('btnIcon');
+    const btnLoader = document.getElementById('btnLoader');
     const resultBox = document.getElementById('resultBox');
+    const optionsContainer = document.getElementById('downloadOptions');
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      
       let rawUrl = urlInput.value.trim();
+      
+      // حماية ضد الروابط الخاطئة التي تبدأ بـ /
+      if (rawUrl.startsWith('/http')) rawUrl = rawUrl.substring(1);
 
-      // تنظيف الرابط
-      if (rawUrl.startsWith('/http')) {
-        rawUrl = rawUrl.substring(1);
-      }
-
-      btnText.innerText = 'جاري الجلب...';
+      // حالة التحميل
+      btnIcon.style.display = 'none';
+      btnLoader.style.display = 'block';
+      btnText.innerText = 'جاري التحميل...';
       submitBtn.disabled = true;
       resultBox.classList.add('hidden');
+      optionsContainer.innerHTML = ''; // تنظيف النتائج السابقة
 
       try {
-        let videoDownloadUrl = "";
-        let coverImg = "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400";
+        let downloadLink = "";
 
-        // التعامل مع TikTok عبر TikWM API المباشر
-        if (rawUrl.includes('tiktok.com')) {
+        // المحرك 1: للإنستغرام (SnapInsta Proxy) - مستقر جداً
+        if (rawUrl.includes('instagram.com')) {
+          const response = await fetch('https://snapinsta.app/api/ajaxSearch', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+              'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: `q=${encodeURIComponent(rawUrl)}&vt=ig`
+          });
+          
+          const htmlResult = await response.text();
+          
+          // استخراج أول رابط تحميل HD من كود HTML الراجع
+          const match = htmlResult.match(/href="(https:\/\/[^"]+)"[^>]*>[\s\S]*?Download Video/i);
+          if (match && match[1]) {
+            downloadLink = match[1];
+          }
+        } 
+        
+        // المحرك 2: لتيك توك (TikWM)
+        else if (rawUrl.includes('tiktok.com')) {
           const formData = new FormData();
           formData.append('url', rawUrl);
-          formData.append('hd', '1');
-
           const response = await fetch('https://www.tikwm.com/api/', {
             method: 'POST',
             body: formData
           });
           const resData = await response.json();
-
           if (resData.code === 0 && resData.data) {
-            videoDownloadUrl = resData.data.play || resData.data.wmplay;
-            coverImg = resData.data.cover || coverImg;
-          }
-        } 
-        // التعامل مع إنستغرام وباقي المنصات عبر محرك عالمي
-        else {
-          const response = await fetch(`https://api.vxtiktok.com/info?url=${encodeURIComponent(rawUrl)}`);
-          if (response.ok) {
-            const data = await response.json();
-            videoDownloadUrl = data.video_url || data.url;
-            coverImg = data.cover || coverImg;
-          } else {
-            // المحرك البديل لإنستغرام
-            videoDownloadUrl = `https://ddinstagram.com/v/${rawUrl.split('/reel/')[1]?.split('/')[0] || ''}`;
+            downloadLink = resData.data.play;
           }
         }
 
-        if (videoDownloadUrl) {
-          document.getElementById('videoThumb').src = coverImg;
-          const optionsContainer = document.getElementById('downloadOptions');
+        // عرض النتيجة
+        if (downloadLink) {
           optionsContainer.innerHTML = `
-            <a href="${videoDownloadUrl}" target="_blank" rel="noopener noreferrer" download class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-center text-sm transition-colors flex items-center justify-center gap-2 shadow-lg">
+            <a href="${downloadLink}" target="_blank" rel="noopener noreferrer" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-center text-sm transition-colors flex items-center justify-center gap-2 shadow-lg">
               <i class="fa-solid fa-file-arrow-down"></i> اضغط هنا لتحميل الفيديو HD
             </a>
+            <p class="text-xs text-slate-500 text-center">ملاحظة: إذا فتح الفيديو في صفحة جديدة، اضغط على النقاط الثلاث واختر "تحميل".</p>
           `;
           resultBox.classList.remove('hidden');
         } else {
-          alert('تعذر استخراج الفيديو. يرجى التأكد من أن الحساب عام (Public) وإعادة المحاولة.');
+          alert('تعذر استخراج الفيديو. يرجى التأكد من أن الرابط صحيح وأن الحساب عام (Public).');
         }
 
       } catch (error) {
-        alert('حدث خطأ في الاتصال، يرجى إعادة المحاولة.');
+        alert('حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى لاحقاً.');
+        console.error(error);
       } finally {
+        // إعادة حالة الزر
+        btnIcon.style.display = 'block';
+        btnLoader.style.display = 'none';
         btnText.innerText = 'تحميل الآن';
         submitBtn.disabled = false;
       }
     });
   </script>
 
-  <!-- Social Bar Ad -->
-  <script type="text/javascript" src="https://pl30536082.effectivecpmnetwork.com/5e/ca/fb/5ecafbff1e6b00e7ec9ab2bd5f0fdbbe.js"></script>
 </body>
 </html>
