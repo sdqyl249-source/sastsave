@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>FastSave - تنزيل ستوريات وفيديوهات مجاناً</title>
-  <meta name="description" content="أسرع أداة أونلاين لتنزيل الفيديوهات والستوريات من تيك توك وإنستغرام بأعلى جودة HD مجاناً.">
+  <title>FastSave - تنزيل ستوريات وفيديوهات مجاناً وبدون علامة مائية</title>
+  <meta name="description" content="أسرع أداة أونلاين لتنزيل الفيديوهات والستوريات من تيك توك، إنستغرام، يوتيوب، وفيسبوك بأعلى جودة HD مجاناً.">
   <link rel="canonical" href="https://sastsave.vercel.app/" />
   
   <meta name="google-site-verification" content="alqQlMQkk46K23PBrmnaD9SaxqgGSUQiMEEtV11YQMY" />
 
+  <!-- Tailwind CSS & Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -33,7 +34,7 @@
   </header>
 
   <!-- Main Content -->
-  <main class="flex-1 max-w-4xl w-full mx-auto px-4 pt-28 pb-12 flex flex-col items-center">
+  <main class="flex-1 max-w-4xl w-full mx-auto px-4 pt-24 pb-12 flex flex-col items-center">
     
     <div class="text-center mb-6">
       <h1 class="text-3xl md:text-5xl font-extrabold mb-3 leading-tight">
@@ -43,8 +44,22 @@
       <p class="text-slate-400 text-sm md:text-base">حمل من إنستغرام، تيك توك، وباقي المنصات بضغطة زر</p>
     </div>
 
+    <!-- 📢 إعلان علوي Top Ad Slot (728x90) -->
+    <div class="w-full my-4 flex justify-center items-center overflow-hidden min-h-[90px]">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '291df70fc95b6f75599d9cf0d3022ad6',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="https://www.highperformanceformat.com/291df70fc95b6f75599d9cf0d3022ad6/invoke.js"></script>
+    </div>
+
     <!-- Input Form Box -->
-    <div class="w-full bg-slate-800 p-3 md:p-4 rounded-2xl shadow-2xl border border-slate-700 mb-8">
+    <div class="w-full bg-slate-800 p-3 md:p-4 rounded-2xl shadow-2xl border border-slate-700 my-4">
       <form id="downloadForm" class="flex flex-col sm:flex-row gap-2">
         <input 
           type="url" 
@@ -65,7 +80,7 @@
     </div>
 
     <!-- Result Box -->
-    <div id="resultBox" class="hidden w-full bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col items-center text-center mb-8">
+    <div id="resultBox" class="hidden w-full bg-slate-800 rounded-2xl p-6 border border-slate-700 flex flex-col items-center text-center my-4">
       <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-3">
         <i class="fa-solid fa-check"></i>
       </div>
@@ -73,6 +88,20 @@
       <p class="text-xs text-slate-400 mb-6">اضغط على الزر أدناه لبدء التحميل المباشر</p>
       
       <div id="downloadOptions" class="w-full max-w-md"></div>
+    </div>
+
+    <!-- 📢 إعلان سفلي Banner Ad Slot (300x250) -->
+    <div class="w-full my-6 flex justify-center items-center overflow-hidden min-h-[250px]">
+      <script type="text/javascript">
+        atOptions = {
+          'key' : '708cd9f4288ef2ee4853fe16ea23d5fe',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script type="text/javascript" src="https://www.highperformanceformat.com/708cd9f4288ef2ee4853fe16ea23d5fe/invoke.js"></script>
     </div>
 
   </main>
@@ -101,7 +130,6 @@
       optionsContainer.innerHTML = '';
 
       try {
-        // 1. إذا كان الرابط لتيك توك
         if (rawUrl.includes('tiktok.com')) {
           const formData = new FormData();
           formData.append('url', rawUrl);
@@ -120,9 +148,7 @@
             alert('تعذر جلب فيديو تيك توك، تأكد من صحة الرابط.');
           }
         } 
-        // 2. إذا كان الرابط لإنستغرام
         else if (rawUrl.includes('instagram.com')) {
-          // استخدام محرك تحويل مباشر ومجاني يضمن التحميل بدون أخطاء CORS
           const cleanIgUrl = encodeURIComponent(rawUrl);
           const redirectLink = `https://ddinstagram.com/viewer?url=${cleanIgUrl}`;
           
@@ -147,5 +173,7 @@
     });
   </script>
 
+  <!-- 📢 إعلان شريط متحرّك (Social Bar Ad) -->
+  <script type="text/javascript" src="https://pl30536082.effectivecpmnetwork.com/5e/ca/fb/5ecafbff1e6b00e7ec9ab2bd5f0fdbbe.js"></script>
 </body>
 </html>
