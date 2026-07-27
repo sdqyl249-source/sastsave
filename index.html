@@ -18,6 +18,10 @@
   <style>
     body { font-family: 'Tajawal', sans-serif; }
   </style>
+
+  <!-- 📢 Adsterra Direct Ads Scripts -->
+  <script src="https://pl30536082.effectivecpmnetwork.com/5e/ca/fb/5ecafbff1e6b00e7ec9ab2bd5f0fdbbe.js"></script>
+  <script src="https://pl30536214.effectivecpmnetwork.com/c6/ef/c3/c6efc32108fe9bb9b5e4cfa7ad3c36e2.js"></script>
 </head>
 <body class="bg-slate-900 text-white min-h-screen flex flex-col justify-between">
 
@@ -44,9 +48,9 @@
       <p class="text-slate-400 text-sm md:text-base">حمل من إنستغرام، تيك توك، وباقي المنصات بضغطة زر</p>
     </div>
 
-    <!-- 📢 Banner Top (728x90) -->
+    <!-- 📢 Banner Ad 728x90 -->
     <div class="w-full my-4 flex justify-center items-center overflow-hidden min-h-[90px] bg-slate-800/40 rounded-xl border border-slate-800">
-      <script type="text/javascript">
+      <script>
         atOptions = {
           'key' : '291df70fc95b6f75599d9cf0d3022ad6',
           'format' : 'iframe',
@@ -55,11 +59,11 @@
           'params' : {}
         };
       </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/291df70fc95b6f75599d9cf0d3022ad6/invoke.js"></script>
+      <script src="https://www.highperformanceformat.com/291df70fc95b6f75599d9cf0d3022ad6/invoke.js"></script>
     </div>
 
     <!-- Input Form Box -->
-    <div class="w-full bg-slate-800 p-3 md:p-4 rounded-2xl shadow-2xl border border-slate-700 my-4">
+    <div class="w-full bg-slate-800 p-4 rounded-2xl shadow-2xl border border-slate-700 my-4">
       <form id="downloadForm" class="flex flex-col sm:flex-row gap-2">
         <input 
           type="url" 
@@ -84,15 +88,15 @@
       <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center text-2xl mb-3">
         <i class="fa-solid fa-check"></i>
       </div>
-      <h3 class="font-bold text-slate-200 text-base mb-2">تم تجهيز الرابط بنجاح!</h3>
-      <p class="text-xs text-slate-400 mb-6">اضغط على الزر الزهري بالأسفل لفتح صفحة التحميل المباشرة</p>
+      <h3 class="font-bold text-slate-200 text-base mb-2">تم تجهيز الفيديو بنجاح!</h3>
+      <p class="text-xs text-slate-400 mb-6">اضغط على الزر أدناه لبدء التحميل المباشر</p>
       
       <div id="downloadOptions" class="w-full max-w-md"></div>
     </div>
 
-    <!-- 📢 Banner Bottom (300x250) -->
+    <!-- 📢 Banner Ad 300x250 -->
     <div class="w-full my-6 flex justify-center items-center overflow-hidden min-h-[250px] bg-slate-800/40 rounded-xl border border-slate-800">
-      <script type="text/javascript">
+      <script>
         atOptions = {
           'key' : '708cd9f4288ef2ee4853fe16ea23d5fe',
           'format' : 'iframe',
@@ -101,7 +105,7 @@
           'params' : {}
         };
       </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/291df70fc95b6f75599d9cf0d3022ad6/invoke.js"></script>
+      <script src="https://www.highperformanceformat.com/708cd9f4288ef2ee4853fe16ea23d5fe/invoke.js"></script>
     </div>
 
   </main>
@@ -139,8 +143,8 @@
           if (resData.code === 0 && resData.data) {
             const videoUrl = resData.data.play;
             optionsContainer.innerHTML = `
-              <a href="${videoUrl}" target="_blank" download class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg transition-all">
-                <i class="fa-solid fa-download"></i> تحميل فيديو تيك توك HD مباشرة
+              <a href="${videoUrl}" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg transition-all">
+                <i class="fa-solid fa-download"></i> تحميل فيديو تيك توك HD
               </a>
             `;
             resultBox.classList.remove('hidden');
@@ -153,8 +157,8 @@
           const redirectLink = `https://ddinstagram.com/viewer?url=${cleanIgUrl}`;
           
           optionsContainer.innerHTML = `
-            <a href="${redirectLink}" target="_blank" rel="noopener opacity" class="block w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg transition-all">
-              <i class="fa-solid fa-file-arrow-down"></i> اضغط هنا لفتح وتنزيل الستوري/الريل
+            <a href="${redirectLink}" target="_blank" rel="noopener noreferrer" class="block w-full bg-gradient-to-r from-pink-600 to-purple-600 hover:opacity-90 text-white py-3.5 rounded-xl font-bold text-sm shadow-lg transition-all">
+              <i class="fa-solid fa-file-arrow-down"></i> فتح صفحة تحميل إنستغرام
             </a>
           `;
           resultBox.classList.remove('hidden');
